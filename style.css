@@ -1,0 +1,209 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND ÁGUA ROXA */
+.background {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, #5f2c82, #9d50bb, #41295a);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* SEÇÕES */
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 100px;
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ANIMAÇÃO ENTRADA */
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  width: 260px;
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card li span {
+  color: #ffd6ff;
+}
+
+/* CARROSSEL */
+.carousel-card {
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+}
+
+.carousel-card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+/* BOLO */
+.cake {
+  width: 160px;
+  height: 120px;
+  background: linear-gradient(180deg, #ffb6c1, #ff8fab);
+  border-radius: 0 0 24px 24px;
+  position: relative;
+  animation: cakeFloat 4s ease-in-out infinite;
+}
+@keyframes cakeFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.candle {
+  width: 10px;
+  height: 40px;
+  background: linear-gradient(180deg, #ffffff, #eaeaea);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* CHAMA MAIS REALISTA */
+.flame {
+  width: 16px;
+  height: 24px;
+  background: radial-gradient(circle at 30% 30%, #fff5cc, #ff9f1c, #ff5400);
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  top: -22px;
+  left: -3px;
+  transform-origin: center bottom;
+  animation: flameMove 0.8s ease-in-out infinite;
+  filter: blur(0.5px);
+}
+/* Oscilação natural da chama */
+@keyframes flameMove {
+  0% {
+    transform: rotate(-2deg) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotate(3deg) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-2deg) scale(1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #fff;
+  color: #5f2c82;
+}
+
+/* SLIDESHOW FINAL */
+.slideshow {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.slideshow img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.hidden {
+  display: none;
+}
+#fadeOverlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 3s ease;
+  z-index: 9;
+}

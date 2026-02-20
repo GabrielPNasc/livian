@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Você 💜</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND ANIMADO -->
+  <div class="background"></div>
+
+  <!-- 1️⃣ BOAS-VINDAS -->
+  <section class="section welcome fade-in">
+    <h1>Bem-vinda, meu amor 💜</h1>
+    <p>
+      Esse cantinho foi feito só pra você.  
+      Cada detalhe carrega um pedacinho do amor que mora em mim.
+    </p>
+  </section>
+
+  <!-- 2️⃣ CARACTERÍSTICAS -->
+  <section class="section traits">
+    <h2>Sobre você ✨</h2>
+
+    <div class="cards">
+      <!-- CARD 1 -->
+      <div class="card">
+        <img src="Livian/IMG-20251215-WA0010.jpg" alt="Ela">
+        <ul>
+          <li>Beleza: <span>100/100</span></li>
+          <li>Carisma: <span>100/100</span></li>
+          <li>Sorriso: <span>100/100</span></li>
+          <li>Altura: <span>10/100</span> 😅</li>
+          <li>Perfeição: <span>∞/100</span></li>
+        </ul>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <img src="Livian/Imagem do WhatsApp de 2025-12-15 à(s) 15.32.36_ada6b351.jpg" alt="Ela">
+        <ul>
+          <li>Doçura: <span>100/100</span></li>
+          <li>Olhar: <span>100/100</span></li>
+          <li>Presença: <span>100/100</span></li>
+          <li>Amor: <span>∞/100</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3️⃣ CARROSSEL EMOCIONAL -->
+  <section class="section carousel-section">
+    <div class="carousel-card">
+      <img id="carouselImage" src="Livian/IMG-20251215-WA0011.jpg" alt="Momentos">
+      <p id="carouselText"></p>
+    </div>
+  </section>
+
+  <!-- 4️⃣ ANIVERSÁRIO -->
+  <section class="section birthday">
+    <h2>Hoje é um dia especial 🎂</h2>
+
+    <div class="cake">
+      <div class="candle">
+        <div class="flame" id="flame"></div>
+      </div>
+    </div>
+
+    <button id="blowBtn">Assoprar 🎉</button>
+  </section>
+
+  <!-- SLIDESHOW FINAL -->
+  <div id="finalSlideshow" class="slideshow hidden">
+    <img id="slideshowImage" src="Livian/IMG-20251215-WA0007.jpg" alt="Memórias">
+  </div>
+
+  <audio id="memoryMusic" loop>
+  <source src="music/Que sorte a nossa.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+  <div id="fadeOverlay"></div>
+</body>
+</html>
